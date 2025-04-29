@@ -17,3 +17,6 @@ DigiCertGlobalRootCA.crt.pem
 
 # googleAPI
 gcp-credentials.json
+
+# zipファイル
+deploy.zip

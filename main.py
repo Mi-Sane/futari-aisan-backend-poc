@@ -100,6 +100,10 @@ class SentimentTestInput(BaseModel):
 
 # --- エンドポイント ---
 
+@app.get("/")
+async def root():
+    return {"message": "Hello FutariAI Backend is Alive!"}
+
 # 一問一答機能：会話セッションの開始または継続の処理
 @app.post("/chat", response_model=ChatResponse)
 async def chat_endpoint(request: ChatRequest):
