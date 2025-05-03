@@ -41,11 +41,7 @@ SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{D
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL, 
     echo=True,
-    connect_args={
-        "ssl":{
-            "ca":ssl_cert
-            }
-        }
+    connect_args={ "ssl": { "ssl_disabled": True } }
     )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
